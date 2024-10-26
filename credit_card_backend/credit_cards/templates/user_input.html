@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Input</title>
+</head>
+<body>
+    <h1>Credit Card Recommendation</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="spending_habits">Spending Habits:</label>
+        <input type="text" name="spending_habits" required><br>
+        
+        <label for="credit_score_range">Credit Score Range:</label>
+        <input type="text" name="credit_score_range" required><br>
+        
+        <label for="desired_rewards">Desired Rewards:</label>
+        <input type="text" name="desired_rewards" required><br>
+        
+        <label for="monthly_budget">Monthly Budget:</label>
+        <input type="number" name="monthly_budget" required step="0.01"><br>
+        
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>

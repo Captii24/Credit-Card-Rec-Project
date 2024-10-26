@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Cards</title>
+</head>
+<body>
+    <h1>Recommended Credit Cards</h1>
+    <ul>
+        {% for card in recommended_cards %}
+            <li>{{ card.name }} - {{ card.rewards_rate }} - {{ card.annual_fee }}</li>
+        {% empty %}
+            <li>No recommendations found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'user_input' %}">Back</a>
+</body>
+</html>
